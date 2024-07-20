@@ -1,0 +1,106 @@
+:root {
+    --orange: #E46D07;
+	--orange_light: #EFA345;
+	--orange_hover: #ffe5c5;
+
+	--grey: #DADADA;
+
+    --brown: #6C2D00;
+    --paper: #FFFAD0;
+	--old_paper: #e8cb87;
+
+	--telegram: #00BAF3;
+	--instagram: #F721A2;
+	--youtube: #FF3333;
+	--tiktok: #262626;
+	--vkontakte: #005EA2;
+}
+
+::-webkit-scrollbar {
+	width: 16px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-button {
+	background: #f1f1f1;
+	height: 4px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+	width: 10px;
+	background: #888;
+	border-radius: 20px;
+	border: 4px solid #f1f1f1;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #E46D07; 
+}
+
+::selection{
+    background-color: #E46D07;
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+body.no_scroll {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+section {
+    margin-top: 100px;
+
+	&:not(:first-child) {
+		margin-bottom: 100px;
+	}
+}
+
+/* 992px - 1200px */
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 960px;
+	}
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+	.container {
+		width: 720px;
+	}
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+	.container {
+		width: 540px;
+	}
+}
+
+/* 320px - 576px */
+@media screen and (max-width: 576px) {
+	.container {
+		width: 90%;
+		&.fullwidth {
+			width: 100%;
+		}
+	}
+}

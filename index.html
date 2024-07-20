@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Иконка -->
+    <link rel="icon" href="images/favicon.svg">
+
+    <title>Dune | Главная</title>
+
+    <!-- Статические стили -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/general.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+
+    <!-- Header -->
+    <link rel="stylesheet" href="styles/includes/header.css">
+    <!-- Footer -->
+    <link rel="stylesheet" href="styles/includes/footer.css">
+
+    <!-- Главная страница -->
+    <link rel="stylesheet" href="styles/main_page/main.css">
+    <link rel="stylesheet" href="styles/main_page/social_slider.css">
+    <link rel="stylesheet" href="styles/main_page/gorets.css">
+
+    <!-- Статьи -->
+    <link rel="stylesheet" href="styles/article_page/article.css">
+    <!-- Фотоотчеты -->
+    <link rel="stylesheet" href="styles/album_page/album.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header_inner">
+                <a href="#" id="header_link"><img src="images/logo_desktop.svg" alt="logo" class="header_logo"></a>
+                
+                <nav class="header_nav" id="nav_menu">
+                    <ul class="nav_menu">
+                        <li class="menu_item active">
+                            <a href="#" class="header_link">Главная</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#" class="header_link">Походы</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#" class="header_link">Фотоотчеты</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#" class="header_link">О нас</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header_tools" id="header_tools">
+                    <div class="lang_button" id="lang_button">
+                        <img class="lang_icon" src="images/icons/icon_langs.svg" alt="lang">
+                        <p id="current_lang">RU</p>
+                        <img src="images/icons/icon_droparrow.svg" alt="droparrow">
+
+                        <ul class="langs_wrapper" id="langs_wrapper">
+                            <li class="lang_item">
+                                <img src="images/flags/uzb.svg" alt="uz">
+                                <p class="lang_value">UZ</p>
+                            </li>
+                            <li class="lang_item">
+                                <img src="images/flags/rus.svg" alt="ru">
+                                <p class="lang_value">RU</p>
+                            </li>
+                            <li class="lang_item">
+                                <img src="images/flags/eng.svg" alt="en">
+                                <p class="lang_value">EN</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="search_button" id="search_button">
+                        <img src="images/icons/icon_search.svg" alt="search">
+                    </button>
+                </div>
+
+                <div class="search_wrapper" id="search_wrapper">
+                    <input type="text" class="search_input" id="search_input" placeholder="Большой Чимган, озеро Бадак и т.п.">
+                    <button class="search_submit_button">
+                        <img src="images/icons/icon_search_white.svg" alt="search">
+                    </button>
+                    <button class="close_button" id="close_button">
+                        <img src="images/icons/icon_close.svg" alt="X">
+                    </button>
+                </div>
+
+                <div class="burger_menu" id="burger_menu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container fullwidth">
+            <div class="main_inner">
+                <div class="swiper main_block block_1" id="main_slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide main_slide">
+                            <img class="slide_photo" src="images/test_photo/Photo_01.jpg" alt="photo">
+                            <div class="slider_inner">
+                                <h3 class="slider_title">Фотоотчет: Поход к расщелине на реке Коксу</h3>
+                                <a class="slider_button">Смотреть</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide main_slide">
+                            <img class="slide_photo" src="images/test_photo/Photo_02.jpg" alt="photo">
+                            <div class="slider_inner">
+                                <h3 class="slider_title">Фотоотчет: Экстримальный поход до водопада Гулькама</h3>
+                                <a class="slider_button">Смотреть</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide main_slide">
+                            <img class="slide_photo" src="images/test_photo/Photo_03.jpg" alt="photo">
+                            <div class="slider_inner">
+                                <h3 class="slider_title">Фотоотчет: В гости к «Мохнатому» водопаду Аксарсая</h3>
+                                <a class="slider_button">Смотреть</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="main_slider_btn prev">
+                        <img src="images/icons/icon_droparrow.svg" alt="<" class="main_slider_btn_img">
+                    </button>
+                    <button class="main_slider_btn next">
+                        <img src="images/icons/icon_droparrow.svg" alt=">" class="main_slider_btn_img">
+                    </button>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="main_block block_2">
+                    <img class="block_photo" src="images/test_photo/Photo_04.jpg" alt="photo">
+                    <div class="block_inner">
+                        <h3 class="block_title">Многодневный поход к расщелине на реке Коксу</h3>
+                        <a class="block_button">Читать</a>
+                    </div>
+                </div>
+                <div class="main_block block_3">
+                    <img class="block_photo" src="images/test_photo/Photo_05.jpg" alt="photo">
+                    <div class="block_inner">
+                        <h3 class="block_title">Экстримальный поход до водопада Гулькама</h3>
+                        <a class="block_button">Читать</a>
+                    </div>
+                </div>
+                <div class="main_block block_4">
+                    <img class="block_photo" src="images/test_photo/Photo_06.jpg" alt="photo">
+                    <div class="block_inner">
+                        <h3 class="block_title">В гости к «Мохнатому» водопаду Аксарсая</h3>
+                        <a class="block_button">Читать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section>
+        <div class="container">
+            <article class="article">
+                <div class="article_action">
+                    <img class="article_photo" src="images/test_photo/Photo_04.jpg" alt="photo">
+                    <a href="#" class="article_button desktop">Читать</a>
+                </div>
+
+                <div class="article_info">
+                    <h3 class="article_title">Экстримальный поход до водопада Гулькамсая</h3>
+                    <p class="article_text">Непредсказуемый и поражающий своей невероятной красотой поход к водопаду, у истоков горной Гулькамсая!</p>
+                    <ul class="article_points">
+                        <li class="point">
+                            <img class="point_img" src="images/articles/icons/point_map.png" alt="icon">
+                            <div class="point_info">
+                                <h4 class="point_title">Протяженность</h4>
+                                <p class="point_value">18 - 19 км</p>
+                            </div>
+                        </li>
+                        <li class="point">
+                            <img class="point_img" src="images/articles/icons/point_mountains.png" alt="icon">
+                            <div class="point_info">
+                                <h4 class="point_title">Набор высоты</h4>
+                                <p class="point_value">450 - 650 м</p>
+                            </div>
+                        </li>
+                        <li class="point">
+                            <img class="point_img" src="images/articles/icons/point_backpack.png" alt="icon">
+                            <div class="point_info">
+                                <h4 class="point_title">Сложность</h4>
+                                <p class="point_value">Средняя</p>
+                            </div>
+                        </li>
+                        <li class="point">
+                            <img class="point_img" src="images/articles/icons/point_water_well.png" alt="icon">
+                            <div class="point_info">
+                                <h4 class="point_title">Источники воды</h4>
+                                <p class="point_value">Есть</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="#" class="article_button mobile">Читать</a>
+
+                <img class="border_desktop bottom" src="images/articles/border_desktop_height.svg" alt="#">
+                <img class="border_desktop top" src="images/articles/border_desktop_height.svg" alt="#">
+                <img class="border_desktop left" src="images/articles/boeder_desktop_side.svg" alt="#">
+                <img class="border_desktop right" src="images/articles/boeder_desktop_side.svg" alt="#">
+
+                <img class="border_mobile bottom" src="images/articles/border_desktop_height.svg" alt="#">
+                <img class="border_mobile top" src="images/articles/border_desktop_height.svg" alt="#">
+                <img class="border_mobile left" src="images/articles/boeder_mobile_side.svg" alt="#">
+                <img class="border_mobile right" src="images/articles/boeder_mobile_side.svg" alt="#">
+            </article>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <article class="album">
+                <h3 class="album_title">Фотоотчет: В гости к «мохнатому» водопаду Аксарсая</h3>
+                <div class="photos_wrapper">
+                    <div class="album_card">
+                        <div class="album_photo_wrapper">
+                            <img class="album_photo" src="images/test_photo/Photo_01.jpg" alt="photo">
+                        </div>
+                    </div>
+                    <div class="album_card">
+                        <div class="album_photo_wrapper">
+                            <img class="album_photo" src="images/test_photo/Photo_02.jpg" alt="photo">
+                        </div>
+                    </div>
+                    <div class="album_card">
+                        <div class="album_photo_wrapper">
+                            <img class="album_photo" src="images/test_photo/Photo_03.jpg" alt="photo">
+                        </div>
+                    </div>
+                    <div class="album_card link">
+                        <div class="album_photo_wrapper">
+                            <img class="album_photo" src="images/test_photo/Photo_04.jpg" alt="photo">
+                        </div>
+                        <a class="album_link" href="#">Смотреть</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <article class="gorets">
+                <img class="gorets_logo" src="images/gorets_logo.svg" alt="gorets">
+
+                <div class="gorets_content">
+                    <h3 class="gorets_title">Проект «Горец»</h3>
+                    <p class="gorets_text">Делиться своими достижениями стало еще проще - новая платформа для выполнения программы!</p>
+                    <a class="gorets_link" href="#">Стать горцем!</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="swiper social_slider" id="social_slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide social_slide">
+                        <img class="social_logo" src="images/social_logos/telegram_link.png" alt="link">
+                        <div class="social_content">
+                            <h3 class="social_title">Читай больше полезных материалов в нашем Телеграм-канале!</h3>
+                            <a class="social_link telegram">Подписаться!</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide social_slide">
+                        <img class="social_logo" src="images/social_logos/instagram_link.png" alt="link">
+                        <div class="social_content">
+                            <h3 class="social_title">Смотри больше ярких моментов у нас в Инстаграме!</h3>
+                            <a class="social_link instagram">Подписаться!</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide social_slide">
+                        <img class="social_logo" src="images/social_logos/youtube_link.png" alt="link">
+                        <div class="social_content">
+                            <h3 class="social_title">Смотри колоритные видеоотчеты на нашем YouTube-канале!</h3>
+                            <a class="social_link youtube">Подписаться!</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide social_slide">
+                        <img class="social_logo" src="images/social_logos/tiktok_link.png" alt="link">
+                        <div class="social_content">
+                            <h3 class="social_title">Вдохнавляйся атмосферным контентом у нас в Тиктоке!</h3>
+                            <a class="social_link tiktok">Подписаться!</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide social_slide">
+                        <img class="social_logo" src="images/social_logos/vk_link.png" alt="link">
+                        <div class="social_content">
+                            <h3 class="social_title">Присоединяйся к нашему сообществу во ВКонтакте!</h3>
+                            <a class="social_link vkontakte">Подписаться!</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="social_slider_btn prev">
+                    <img src="images/icons/icon_droparrow.svg" alt="<" class="social_slider_btn_img">
+                </button>
+                <button class="social_slider_btn next">
+                    <img src="images/icons/icon_droparrow.svg" alt=">" class="social_slider_btn_img">
+                </button>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <img class="footer_dunes" src="images/social_logos/footer_border_new.svg" alt="#">
+
+        <img src="images/main_logo_dune_white.svg" alt="logo">
+
+        <div class="footer_content">
+            <h3 class="footer_title">Подписывайся на нас в соц.сетях!</h3>
+            <ul class="footer_links_wrapper">
+                <li>
+                    <a href="#">
+                        <img class="footer_link" src="images/social_logos/footer_telegram.svg" alt="link">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="footer_link" src="images/social_logos/footer_instagram.svg" alt="link">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="footer_link" src="images/social_logos/footer_youtube.svg" alt="link">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="footer_link" src="images/social_logos/footer_tiktok.svg" alt="link">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="footer_link" src="images/social_logos/footer_vk.svg" alt="link">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer_info">
+            <p>2022 - 2024 ©</p>
+            <p>Все права защищены ®</p>
+            <p>
+                Developed by
+                <a href="#">
+                    Arthur
+                    <img src="images/icons/icon_link_arrow.svg" alt="link">
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Header -->
+    <script src="scripts/includes/header.js"></script>
+
+    <!-- Slider -->
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <!-- Main page -->
+    <script src="scripts/main_page/slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+/* ------------------ Сама шапка ------------------ */
+.header {
+    /* padding-block: 30px; */
+    margin-block: 30px;
+    /* overflow: hidden; */
+}
+.header_inner {
+    min-height: 60px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.header_logo {
+    height: 60px;
+    margin-right: 60px;
+}
+
+/* ------------------ Меню со ссылками ------------------ */
+.header_nav {
+    height: 100%;
+}
+.nav_menu {
+    display: flex;
+}
+.menu_item {
+    position: relative;
+    padding: 20px;
+}
+.menu_item.active .header_link {
+    font-weight: bold;
+    color: var(--orange);
+}
+.menu_item::before, .menu_item::after {
+    content: '';
+    position: absolute;
+    width: 0; /* Размеры svg */
+    height: 10px; /* Размеры svg */
+    background-repeat: no-repeat;
+    background-size: contain; /* или 'cover', в зависимости от нужного эффекта */
+    opacity: 0; /* Начальное состояние - невидимы */
+    transition: width 0.3s ease, opacity 0.3s ease; /* Плавный переход */
+}
+.menu_item::before {
+    background-image: url(../../images/icons/icon_wave.svg);
+    bottom: 85%;
+    rotate: 180deg;
+    left: calc(50% - 50px);
+}
+.menu_item::after {
+    background-image: url(../../images/icons/icon_wave.svg);
+    top: 85%;
+    left: calc(50% - 50px);
+}
+/* .menu_item.active::before, .menu_item.active::after, */
+.menu_item:hover::before, .menu_item:hover::after
+{
+    opacity: 1; /* Делает волны видимыми при наведении */
+    width: 100px;
+}
+.header_link {
+    padding: 20px;
+    position: relative;
+
+    text-wrap: nowrap;
+    color: var(--orange_light);
+}
+
+/* ------------------ Кнопки языка и поиска ------------------ */
+.header_tools {
+    display: flex;
+    margin-left: auto;
+
+    &.hide {
+        display: none;
+    }
+}
+.search_button {
+    padding: 16px;
+    aspect-ratio: 1/1;
+
+    transition: all 0.2s ease-out;
+
+    img  {
+        transition: scale 0.2s ease-out;
+    }
+    &:hover {
+        background-color: var(--orange_hover);
+        img {
+            scale: 1.1;
+        }
+    }
+}
+.lang_button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    position: relative;
+
+    padding-inline: 20px;
+
+    font-size: 24px;
+    color: var(--orange);
+    border-right: 2px solid var(--grey);
+    cursor: pointer;
+
+    transition: all 0.2s ease-out;
+
+    &:hover {
+        background-color: var(--orange_hover);
+    }
+}
+
+/* ------------------ Кнопка бургера ------------------ */
+.burger_menu {
+    display: none;
+}
+.line {
+    width: 50px;
+    height: 5px;
+    background-color: var(--orange);
+    display: block;
+    margin: 8px auto;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+.burger_menu.active .line:nth-child(2) {
+    opacity: 0;
+}
+.burger_menu.active .line:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+.burger_menu.active .line:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+/* ------------------ Поле поиска ------------------ */
+.search_wrapper {
+    position: absolute;
+    bottom: 150%;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+
+    background-color: white;
+    transition: all 0.4s ease;
+
+    &.active {
+        bottom: 0;
+    }
+}
+.search_input {
+    flex-grow: 1;
+
+    height: min(80%, 50px);
+    border: 2px solid var(--orange);
+    border-radius: 12px;
+
+    padding-inline: 12px;
+    font-size: inherit;
+    color: var(--orange);
+
+    &::placeholder {
+        color: var(--grey);
+    }
+    &:focus {
+        box-shadow: inset 0 0 7px 0 #e46d07;
+    }
+}
+.search_submit_button, .close_button {
+    padding: 11px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+.search_submit_button {
+    background-color: var(--orange);
+}
+.close_button {
+    border: 2px solid var(--orange);
+}
+
+/* ------------------ Поле выбора языков ------------------ */
+.langs_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: none;
+    width: 80%;
+    z-index: 10;
+
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    &.show {
+        display: block;
+    }
+    &.active {
+        opacity: 1;
+        top: 100%;
+    }
+}
+.lang_item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px 20px;
+    background-color: white;
+    border-bottom: 2px solid var(--grey);
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--orange_hover);
+    }
+}
+
+/* ------------------ Адаптив ------------------ */
+/* 992px - 1200px */
+@media screen and (max-width: 1200px) {
+    .header_logo {
+        margin-right: 0;
+    }
+}
+
+/* 768px - 992px */
+@media screen and (max-width: 992px) {
+    .header_inner {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .header_nav {
+        order: 2;
+
+        width: 100%;
+        margin-top: 20px;
+    }
+    .nav_menu {
+        justify-content: space-between;
+    }
+    .menu_item {
+        padding-inline: 0;
+    }
+
+    .header_tools {
+        order: 1;
+    }
+    .lang_item {
+        padding: 0;
+        aspect-ratio: 1 / 1;
+        display: grid;
+        place-items: center;
+        img {
+            display: none;
+        }
+    }
+}
+
+/* 576px - 768px */
+@media screen and (max-width: 768px) {
+    .header {
+        /* padding-block: 10px; */
+        margin-block: 10px;
+    }
+
+    .header_logo {
+        height: 30px;
+    }
+
+    .header_nav {
+        order: unset;
+        z-index: 100;
+
+        position: fixed;
+        right: -100%;
+        top: 60px;
+        
+        width: 100%;
+        transition: all 0.3s ease-out;
+        height: calc(100% - 60px);
+
+        &.active {
+            right: 0;
+        }
+    }
+    .nav_menu {
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        background-color: #fff;
+    }
+    .menu_item {
+        /* width: 100%;
+        padding-block: 20px;
+        background-color: var(--orange_hover); */
+        text-align: center;
+    }
+    .menu_item.active::before, .menu_item.active::after
+    {
+        opacity: 1; /* Делает волны видимыми при наведении */
+        width: 100px;
+    }
+    .header_link {
+        font-size: 24px;
+    }
+
+    .header_tools {
+        margin-left: unset;
+    }
+    .search_button {
+        padding: 10px;
+    }
+    .lang_button {
+        padding-inline: 10px;
+    }
+    .lang_icon {
+        display: none;
+    }
+
+    .burger_menu {
+        display: block;
+        order: 2;
+    }
+}
+
+/* 320px - 576px */
+@media screen and (max-width: 576px) {
+    .header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+
+        margin-block: unset;
+        padding-block: 10px;
+
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+        
+        transition: all 0.2s ease;
+        &.active {
+            border-radius: 0;
+        }
+    }
+    .search_wrapper {
+        gap: 7px;
+    }
+    .search_input {
+        max-width: 70%;
+    }
+    .search_submit_button, .close_button {
+        padding: 8px;
+    }
+}
